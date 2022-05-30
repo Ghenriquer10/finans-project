@@ -9,7 +9,10 @@ export default createGlobalStyle`
     }
 
     html, body, #root{
-        height: 100%;
+        font-family: sans-serif;
+        button{
+            cursor: pointer;
+        }
     }
 
     ul{
@@ -18,5 +21,6 @@ export default createGlobalStyle`
 
     a{
         text-decoration: none;
+        cursor: pointer;
     }
 `;

@@ -1,3 +1,4 @@
+import React from 'react'
 import * as C from './style'
 import logo from '../../assets/logo.png'
 export const Header = () => {
