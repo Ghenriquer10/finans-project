@@ -11,16 +11,25 @@ export const FooterContainer = styled.div`
     justify-content: space-around;
     flex-direction: row;
 
+    @media (min-width: 320px) and (max-width: 768px) {
+        flex-direction: column;
+    }
+
     .pages{
         width: 50%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: center; 
 
         a{
             margin: 0 20px;
             font-family: monospace;
             font-size: 1.3em;
+
+            @media (min-width: 320px) and (max-width: 768px) {
+                margin: 0 5px;
+            }
+            
         }
 
     }
@@ -37,6 +46,10 @@ export const FooterContainer = styled.div`
         svg{
             height: 40px;
             width: 40px;
+            @media (min-width: 320px) and (max-width: 480px) {
+                height: 30px;
+                width: 30px;
+            }
         }
     }
 `;

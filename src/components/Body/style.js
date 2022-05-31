@@ -6,8 +6,12 @@ export const ContainerTop = styled.div`
     height: 500px;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: row;
+    justify-content: center;
+    
+    @media (min-width: 320px) and (max-width: 768px) {
+        height: 350px;
+    }
 `;
 
 export const About = styled.div`
@@ -18,6 +22,14 @@ export const About = styled.div`
     align-items: flex-start;
     flex-direction: column;
     padding: 100px;
+
+    @media (min-width: 320px) and (max-width: 768px) {
+        padding: 10px;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    
     
     p{
         color: #fff;
@@ -30,11 +42,15 @@ export const About = styled.div`
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
-    }
-
-    p:nth-child(2){
         
+        @media (min-width: 320px) and (max-width: 480px) {
+            font-size: 2.5em;
+        }
+    }
+    
+    p:nth-child(2){
         margin-bottom: 10px;
+        
     }
     
     
@@ -51,6 +67,9 @@ export const About = styled.div`
         width: 70%;
         padding: 10px;
         font-size: 1.1em;
+        @media (min-width: 320px) and (max-width: 480px) {
+            font-size: 0.7em;
+        }
     }
     
     button{
@@ -61,6 +80,10 @@ export const About = styled.div`
         color: #fff;
         cursor: pointer;
         font-size: 1.1em;
+
+        @media (min-width: 320px) and (max-width: 480px) {
+            font-size: 0.7em;
+        }
     }
     
     button:hover{
@@ -72,7 +95,7 @@ export const About = styled.div`
 export const Mobile = styled.div`
     display: flex;
     align-items: center;
-    width: 50%;
+    width: 100%;
     
     svg{
         color: #fff;
@@ -102,6 +125,10 @@ export const Banner = styled.div`
     flex-direction: column;
     justify-content: end;
     align-items: center;
+
+    @media (min-width: 320px) and (max-width: 1024px) {
+        display: none;
+    }
 `;
 
 export const ContainerContent = styled.div`
@@ -116,12 +143,20 @@ export const ContainerContent = styled.div`
 export const FirstContent = styled.div`
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
     flex-direction: row;
     padding: 100px;
     width: 95%;
-    height: 500px;
+    height: 100%;
+        @media (min-width: 320px) and (max-width: 768px) {
+            padding: 0;
+            flex-direction: column;
+        } 
+
+        @media (min-width: 769px) and (max-width: 1024px){
+            padding: 0;
+        }
     
     .about{
         width: 100%;
@@ -130,7 +165,13 @@ export const FirstContent = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
+        
+        @media (min-width: 320px) and (max-width: 768px) {
+            padding: 10px;
+            height: 300px;
+            justify-content: space-around; 
+        }
+        
         p:first-child{
             font-size: 2.4em;
             color: #F7CA3F;
@@ -141,7 +182,7 @@ export const FirstContent = styled.div`
         }
 
         button{
-            width: 17%;
+            width: 50%;
             height: 30px;
             background-color: #fff;
             border: 2px solid blue;
@@ -158,6 +199,7 @@ export const FirstContent = styled.div`
     
     .about-image{
         width: 100%;
+        
         img{
             width: 100%;
             height: 100%;
@@ -166,19 +208,37 @@ export const FirstContent = styled.div`
 `;
 
 export const SecondContent = styled.div`
-    height: 800px;
+    height: 100%;
     width: 95%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    padding: 100px;
+    padding: 100px;    
+
+        @media (min-width: 320px) and (max-width: 768px) {
+            padding: 0;
+            flex-direction: column;
+            height: 700px;
+        } 
+
+        @media (min-width: 769px) and (max-width: 1024px){
+            padding: 0;
+        }
 
     .about-image{
         width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         img{
-            height: 600px;
-            width: 500px;
+            height: 100%;
+            width: 100%;
+
+            @media (min-width: 320px) and (max-width: 768px) {
+                height: 90%;
+                width: 50%;
+            } 
         }
     }
     
@@ -190,6 +250,12 @@ export const SecondContent = styled.div`
         justify-content: space-between;
         padding: 50px;
 
+        @media (min-width: 320px) and (max-width: 768px) {
+            padding: 10px;
+            height: 300px;
+            justify-content: space-around; 
+        }
+
         p:first-child{
             font-size: 2.4em;
             color: #F7CA3F;
@@ -200,7 +266,7 @@ export const SecondContent = styled.div`
         }
 
         button{
-            width: 17%;
+            width: 50%;
             height: 30px;
             background-color: #fff;
             border: 2px solid blue;
@@ -217,26 +283,46 @@ export const SecondContent = styled.div`
 `;
 
 export const ThirdContent = styled.div`
-    width: 80%;
-    height: 400px;
+    width: 95%;
+    height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+
+    @media (min-width: 320px) and (max-width: 1024px) {
+        flex-direction: column;
+    }
+
+    @media (min-width: 769px) and (max-width: 1024px) {
+        width: 100%;
+    }
+
     h1{
         color: #F7CA3F;
         margin-top: 20px;
+        @media (min-width: 320px) and (max-width: 480px) {
+            font-size: 1.1em;
+        }
     }
 
     p{
         width: 80%;
         margin-top: 5px;
+        text-align: center;
     }
     
     img{
         height: 200px;
-        width: 350px;
+        width: 350px;  
+        @media (min-width: 320px) and (max-width: 480px) {
+            height: 150px;
+            width: 220px;  
+        }      
     }
-    .easily{
+
+
+
+        .easily{
             height: 80%;
             display: flex;
             flex-direction: column;
@@ -256,5 +342,9 @@ export const ThirdContent = styled.div`
             flex-direction: column;
             justify-content: center;
             align-items: center;
+        }
+
+        .easily, .time, .suport{
+            margin: 30px 0;
         }
 `;
