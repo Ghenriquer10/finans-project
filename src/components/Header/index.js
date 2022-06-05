@@ -4,7 +4,7 @@ import logo from '../../assets/logo.png'
 import { MdOutlineMenuOpen } from 'react-icons/md'
 import { DataContext } from '../../contexts/datas'
 import { GrLinkNext } from 'react-icons/gr'
-import {useSpring, animated} from 'react-spring'
+import {useTransition, animated} from 'react-spring'
 
 export const Header = () => {
 
@@ -14,25 +14,17 @@ export const Header = () => {
         console.log(menuMobile)
     }
 
-    const animation = useSpring({
-        from: {
-            position: 'absolute',
-            top: '0',
-            translateX: '-100%'
-        },
-        to: {
-            position: 'absolute',
-            top: '0',
-            height: '100vh',
-            width: '100%',
-            translateX: '0%',
-        }        
-    })
+    const animation = useTransition(menuMobile, {
+        from: {x: +500, position: 'absolute'},
+        enter: {x: +0 , position: 'absolute'}, 
+        leave: {x: +500 , position: 'absolute'}
+    });
 
     return(
         <C.HeaderContainer>
-            {menuMobile ? 
-            <animated.div style={animation}>
+            {animation((style, item) => 
+            item ?  
+            <animated.div style={style} className="animated">
                 <C.MobileMenu>
                     <GrLinkNext onClick={toogleMenu}/>
                     <a href='*'><p>Home</p></a>
@@ -43,7 +35,8 @@ export const Header = () => {
                         Entrar
                     </button>
                 </C.MobileMenu> 
-            </animated.div>: null }
+            </animated.div> : ''
+            )}
             
             <C.Logo><a href="*"><img src={logo} alt="logo"/></a></C.Logo>
             <C.MobileMenuButton>

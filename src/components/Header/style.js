@@ -7,7 +7,25 @@ export const HeaderContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
+    .animated{
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: black;
+        color: #fff;
+        width: 90%;
+        height: 100%;
+        border-radius:0 0 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: #0714ab;
+        opacity: 0.9;    
+    }
 `;
+
 
 export const Logo = styled.div`
     height: 100%;
@@ -27,11 +45,14 @@ export const Logo = styled.div`
 
 export const MobileMenuButton = styled.div`
     cursor: pointer;
-
+    
     svg{
         color: #fff;
         height: 50px;
         width: 50px;
+        @media (min-width: 769px) {
+           display: none;
+        }
     }
 `;
 
@@ -53,11 +74,13 @@ export const MobileMenu = styled.div`
     
     svg{
         background-color: white;
-        height: 50px;
-        width: 50px;
+        height: 30px;
+        width: 30px;
         position: absolute;
-        top: 10px;
+        top: 25px;
         left: 15px;
+        padding: 5px;
+        cursor: pointer;
     }
 
     a, button{
@@ -72,7 +95,7 @@ export const MobileMenu = styled.div`
     button{
         width: 50%;
         border: none;
-        height: 7%;
+        height: 5%;
         border-radius: 5px;
         cursor: pointer;
     }
@@ -104,19 +127,21 @@ export const Menu = styled.div`
     }
 
     button{
-        background-color: #F7CA3F;
-        border: 1px solid #fff;
+        background-color: blue;
         cursor: pointer;
         padding: 7px 10px;
         display: flex;
         align-items: center;
         justify-content: center;
         color: #fff;
+        border: none;
+        width: 100px;
     }
 
     button:hover{
         transition: all 0.5s;
-        background-color: #E2AB00;
+        background-color: #fff;
+        color: blue;
     }
 
     p:hover{
