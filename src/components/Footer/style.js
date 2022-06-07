@@ -25,6 +25,7 @@ export const FooterContainer = styled.div`
             margin: 0 20px;
             font-family: monospace;
             font-size: 1.3em;
+            color: #fff;
 
             @media (min-width: 320px) and (max-width: 768px) {
                 margin: 0 5px;
@@ -41,6 +42,7 @@ export const FooterContainer = styled.div`
 
         a{
             margin: 0 20px;
+            color: #fff;
         }
 
         svg{
