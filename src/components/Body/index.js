@@ -46,17 +46,17 @@ export default function Body(){
                 </C.SecondContent>
                 <C.ThirdContent>
                     <div className='easily'>
-                       <img src={easily}/>
+                       <img src={easily} alt="Imagem facil de usar"/>
                        <h1>Fácil de usar</h1>
                        <p>O Finans vai além do básico e permite que você faça controles incríveis, esseciais para suas finanças. Simples como tem que ser.</p>
                     </div>
                     <div className='time'>
-                        <img src={time}/>
+                        <img src={time} alt="Imagem economize tempo"/>
                         <h1>Economize seu tempo!</h1>
                         <p>Tempo é dinheiro! Em segundos você tem tudo sobre controle e aproveite seu tempo com o que realmente importa para você!</p>
                     </div>
                     <div className='suport'>
-                        <img src={suport}/>
+                        <img src={suport} alt="Imagem suporte"/>
                         <h1>Suporte amigo</h1>
                         <p>Dúvida? Perguntas? Nosso suporte super legal ajuda você! A gente está aqui para resolver o sues problemas e deixar a sua vida mais fácil!</p>
                     </div>

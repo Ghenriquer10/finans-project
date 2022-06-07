@@ -8,16 +8,16 @@ export default function Footer(){
     return(
         <C.FooterContainer>
             <div className='pages'>
-                <a>Home</a>
-                <a>Recursos</a>
-                <a>Benêficios</a>
-                <a>Preços</a>
+                <a href='*'>Home</a>
+                <a href='*'>Recursos</a>
+                <a href='*'>Benêficios</a>
+                <a href='*'>Preços</a>
             </div>
             <div className='social-medias'>
-                <a><MdOutlineFacebook/></a>
-                <a><FiInstagram/></a>
-                <a><FaTwitter/></a>
-                <a><FaYoutube/></a>
+                <a href='*'><MdOutlineFacebook/></a>
+                <a href='*'><FiInstagram/></a>
+                <a href='*'><FaTwitter/></a>
+                <a href='*'><FaYoutube/></a>
             </div>
         </C.FooterContainer>
     )
